@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Payment Instructions</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Bank Transfer Payment</h1>
+  </header>
+
+  <section>
+    <p>Please use the following bank details to complete your payment:</p>
+
+    <ul>
+      <li><strong>Bank Name:</strong> Capitec Bank</li>
+      <li><strong>Account Name:</strong> The Canteen Restaurant</li>
+      <li><strong>Account Number:</strong> 1234567890</li>
+      <li><strong>Branch Code:</strong> 470010</li>
+      <li><strong>Reference:</strong> <span id="order-number">Loading...</span></li>
+    </ul>
+
+    <p><strong>Amount to Pay:</strong> <span id="total-display">R0.00</span></p>
+
+    <p>Once you've made the payment, click below to confirm your order:</p>
+    <button onclick="confirmOrder()">I Have Paid</button>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    // Calculate total from cart
+    const cart = JSON.parse(localStorage.getItem("canteenCart")) || [];
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+    document.getElementById("total-display").textContent = "R" + total.toFixed(2);
+
+    // Generate and display order number
+    const orders = JSON.parse(localStorage.getItem("canteenOrders")) || [];
+    const orderNumber = "ORD" + String(orders.length + 1).padStart(3, "0");
+    document.getElementById("order-number").textContent = orderNumber;
+    localStorage.setItem("latestOrderNumber", orderNumber);
+  </script>
+</body>
+</html>

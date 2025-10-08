@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header><h1>Order Confirmed</h1></header>
+  <section>
+    <p>Thank you, your order has been placed successfully!</p>
+    <p><strong>Order Number:</strong> <span id="order-number"></span></p>
+    <p><strong>Order Type:</strong> <span id="order-type"></span></p>
+    <p><strong>Total:</strong> <span id="order-total"></span></p>
+    <p><strong>Confirmation sent to:</strong></p>
+    <ul>
+      <li>Email: <span id="user-email"></span></li>
+      <li>Phone: <span id="user-phone"></span></li>
+    </ul>
+    <a href="menu.html">Return to Menu</a>
+  </section>
+
+  <script>
+    const orders = JSON.parse(localStorage.getItem("canteenOrders")) || [];
+    const latest = orders[orders.length - 1];
+    document.getElementById("order-number").textContent = latest?.orderNumber || "N/A";
+    document.getElementById("order-type").textContent = latest?.type || "N/A";
+    document.getElementById("order-total").textContent = "R" + (latest?.total?.toFixed(2) || "0.00");
+
+    const users = JSON.parse(localStorage.getItem("canteenUsers")) || {};
+    const currentUser = localStorage.getItem("currentUser");
+    const contact = users[currentUser] || {};
+    document.getElementById("user-email").textContent = contact.email || "N/A";
+    document.getElementById("user-phone").textContent = contact.phone || "N/A";
+  </script>
+</body>
+</html>

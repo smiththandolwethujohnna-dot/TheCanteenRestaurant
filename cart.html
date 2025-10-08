@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Your Cart</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </header>
+
+  <section id="cart">
+    <ul id="cart-items"></ul>
+    <p>Total: R<span id="total">0</span></p>
+    <button onclick="checkout()">Checkout</button>
+
+    <form action="https://www.payfast.co.za/eng/process" method="post">
+      <input type="hidden" name="merchant_id" value="10000100" />
+      <input type="hidden" name="merchant_key" value="46f0cd694581a" />
+      <input type="hidden" name="return_url" value="https://yourdomain.com/success.html" />
+      <input type="hidden" name="cancel_url" value="https://yourdomain.com/cancel.html" />
+      <input type="hidden" name="notify_url" value="https://yourdomain.com/notify.php" />
+      <input type="hidden" name="amount" id="payfast-amount" value="0.00" />
+      <input type="hidden" name="item_name" value="Canteen Order" />
+      <button type="submit">Pay Now</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+  <script>updateCart();</script>
+</body>
+</html>

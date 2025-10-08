@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to The Canteen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>THE CANTEEN RESTAURANT</h1>
+    <nav>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart</a>
+      <a href="order-type.html">Order Type</a>
+      <a href="track-order.html">Track Order</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Welcome to The Canteen Restaurant</h2>
+    <p>Explore our delicious menu and place your order with ease.</p>
+  </section>
+
+  <section id="login">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p id="login-message"></p>
+  </section>
+
+  <section id="signup">
+    <h2>Sign Up</h2>
+    <input type="text" id="new-username" placeholder="Choose a username" />
+    <input type="password" id="new-password" placeholder="Choose a password" />
+    <button onclick="signup()">Create Account</button>
+    <p id="signup-message"></p>
+  </section>
+
+  <section id="admin-panel">
+    <h2>Admin Panel</h2>
+    <button onclick="viewOrders()">View Orders</button>
+    <button onclick="editMenu()">Edit Menu</button>
+    <div id="admin-output"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

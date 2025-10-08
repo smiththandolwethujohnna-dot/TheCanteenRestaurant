@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Menu - The Canteen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>THE CANTEEN RESTAURANT</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section id="menu">
+    <h2>Burgers</h2>
+    <div class="item">
+      <img src="images/beef-burger.jpg" alt="Classic Beef Burger" />
+      <span>Classic Beef Burger</span>
+      <button onclick="addToCart('Classic Beef Burger', 40)">Add R40</button>
+    </div>
+    <div class="item">
+      <img src="images/chicken-burger.jpg" alt="Chicken Burger" />
+      <span>Chicken Burger</span>
+      <button onclick="addToCart('Chicken Burger', 35)">Add R35</button>
+    </div>
+    <div class="item">
+      <img src="images/cheese-bacon.jpg" alt="Cheese & Bacon Burger" />
+      <span>Cheese & Bacon Burger</span>
+      <button onclick="addToCart('Cheese & Bacon Burger', 30)">Add R30</button>
+    </div>
+
+    <h2>Chips</h2>
+    <div class="item">
+      <img src="images/fried-chips.jpg" alt="Chips" />
+      <span>Small Chips</span>
+      <button onclick="addToCart('Small Chips', 15)">Add R15</button>
+    </div>
+    <div class="item">
+        <img src="images/fried-chips.jpg" alt="Chips" />
+      <span>Medium Chips</span>
+      <button onclick="addToCart('Medium Chips', 20)">Add R20</button>
+    </div>
+    <div class="item">
+        <img src="images/fried-chips.jpg" alt="Chips" />
+      <span>Large Chips</span>
+      <button onclick="addToCart('Large Chips', 30)">Add R30</button>
+    </div>
+
+    <h2>Drinks</h2>
+    <div class="item">
+      <img src="images/Coca-Cola.jpg" alt="Cold Drink" />
+      <span>Coca-Cola (Small)</span>
+      <button onclick="addToCart('Coca-Cola S', 10)">Add R10</button>
+    </div>
+    <div class="item">
+        <img src="images/Coca-Cola.jpg" alt="Cold Drink" />
+      <span>Coca-Cola (Medium)</span>
+      <button onclick="addToCart('Coca-Cola M', 15)">Add R15</button>
+    </div>
+    <div class="item">
+        <img src="images/Coca-Cola.jpg" alt="Cold Drink" />
+      <span>Coca-Cola (Large)</span>
+      <button onclick="addToCart('Coca-Cola L', 20)">Add R20</button>
+    </div>
+
+    <div class="item">
+        <img src="images/sprite.jpg" alt="Cold Drink" />
+      <span>Sprite (Small)</span>
+      <button onclick="addToCart('Sprite S', 10)">Add R10</button>
+    </div>
+    <div class="item">
+        <img src="images/sprite.jpg" alt="Cold Drink" />
+      <span>Sprite (Medium)</span>
+      <button onclick="addToCart('Sprite M', 15)">Add R15</button>
+    </div>
+    <div class="item">
+         <img src="images/sprite.jpg" alt="Cold Drink" /> 
+      <span>Sprite (Large)</span>
+      <button onclick="addToCart('Sprite L', 20)">Add R20</button>
+    </div>
+
+ <h2>Ice Cream</h2>
+
+<!-- Chocolate Cup -->
+ <div class="item">
+        <img src="images/choco-icecream-cup.jpg" alt="Chocolate Ice Cream" />
+      <span>Chocolate Cup (Small)</span>
+      <button onclick="addToCart('Chocolate Cup S', 10)">Add R10</button>
+    </div>
+    <div class="item">
+        <img src="images/choco-icecream-cup.jpg" alt="Chocolate Ice Cream" />
+      <span>Chocolate Cup (Medium)</span>
+      <button onclick="addToCart('Chocolate Cup M', 12)">Add R13</button>
+    </div>
+    <div class="item">
+         <img src="images/choco-icecream-cup.jpg" alt="Chocolate Ice Cream" /> 
+      <span>Chocolate Cup (Large)</span>
+      <button onclick="addToCart('Chocolate Cup L', 16)">Add R16</button>
+    </div>
+
+<!-- Vanilla Cup -->
+ <div class="item">
+        <img src="images/vanilla-icecream-cup.jpg" alt="Vanilla Ice Cream" />
+      <span>Vanilla Cup (Small)</span>
+      <button onclick="addToCart('Vanilla Cup S', 10)">Add R10</button>
+    </div>
+    <div class="item">
+        <img src="images/vanilla-icecream-cup.jpg" alt="Vanilla Ice Cream" />
+      <span>Vanilla Cup (Medium)</span>
+      <button onclick="addToCart('Vanilla Cup M', 12)">Add R13</button>
+    </div>
+    <div class="item">
+         <img src="images/vanilla-icecream-cup.jpg" alt="Vanilla Ice Cream" /> 
+      <span>Vanilla Cup (Large)</span>
+      <button onclick="addToCart('Vanilla Cup L', 16)">Add R16</button>
+    </div>
+
+    <!-- Cones -->
+    <div class="item">
+      <img src="images/choco-icecream-cone.jpg" alt="Chocolate Cone" />
+      <span>Chocolate Cone</span>
+      <button onclick="addToCart('Chocolate Cone', 8)">Add R8</button>
+    </div>
+    <div class="item">
+        <img src="images/vanilla-icecream-cone.jpg" alt="Vanilla Cone" />
+      <span>Vanilla Cone</span>
+      <button onclick="addToCart('Vanilla Cone', 8)">Add R8</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

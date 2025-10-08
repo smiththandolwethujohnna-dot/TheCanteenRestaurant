@@ -1,0 +1,209 @@
+:root {
+  --primary-blue: #004080;
+  --hover-blue: #0066cc;
+  --light-blue: #e6f0ff;
+  --white: #ffffff;
+  --text-dark: #333333;
+  --border-light: #dddddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 1em;
+  text-align: center;
+}
+
+nav {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1em;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 2em;
+  border-bottom: 1px solid var(--border-light);
+  background-color: var(--light-blue);
+}
+
+h2 {
+  margin-top: 2em;
+  color: var(--primary-blue);
+  border-bottom: 2px solid var(--primary-blue);
+  padding-bottom: 0.3em;
+}
+
+/* Menu items */
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+  background: var(--white);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+}
+
+.item span {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+/* Ice cream grid layout */
+.ice-cream-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  margin-bottom: 2em;
+  background: var(--white);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.flavor-label {
+  font-weight: bold;
+  padding-top: 0.5em;
+  color: var(--text-dark);
+}
+
+.size-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.size-cell button {
+  width: 100%;
+  padding: 0.5em;
+  font-weight: bold;
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.size-cell button:hover {
+  background: var(--hover-blue);
+}
+
+/* Admin dashboard */
+#order-list {
+  background: var(--white);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.order-entry {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.order-entry button {
+  margin-right: 0.5em;
+  margin-top: 0.5em;
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: 0.4em 0.8em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.order-entry button:hover {
+  background: var(--hover-blue);
+}
+
+select {
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+}
+
+/* Forms */
+input {
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+}
+
+#login, #signup {
+  background: var(--white);
+  padding: 1em;
+  margin-bottom: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  margin-top: 2em;
+  background: var(--white);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form input[type="hidden"] {
+  display: none;
+}
+
+form button {
+  margin-top: 1em;
+}
+
+/* Buttons */
+button {
+  background: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--hover-blue);
+}

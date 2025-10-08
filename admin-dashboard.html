@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Customer Orders</h1>
+    <nav>
+      <a href="menu.html">Menu</a>
+      <a href="#" onclick="logoutAdmin()">Logout</a>
+    </nav>
+  </header>
+
+  <section>
+    <label for="status-filter"><strong>Filter by status:</strong></label>
+    <select id="status-filter" onchange="displayOrders()">
+      <option value="All">All</option>
+      <option value="Pending">Pending</option>
+      <option value="Completed">Completed</option>
+    </select>
+
+    <div id="order-list"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
